@@ -1,0 +1,33 @@
+language: python
+
+python:
+  - "3.6"
+
+env:
+  global:
+    - AWS_DEFAULT_REGION=us-east-1
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pytest tests/tests_lambda.py
+
+before_deploy:
+  - make
+  - mv dist/lambda.zip dist/latest.zip
+  - cp dist/latest.zip dist/$TRAVIS_COMMIT.zip
+
+deploy:
+  provider: lambda
+  function_name: activity-decider
+  region: us-east-1
+  role: arn:aws:iam::687128013307:role/service-role/lambda_basic_execution
+  runtime: python3.6
+  module_name: lambda_function
+  handler_name: lambda_handler
+  zip: dist/latest.zip
+
+# By default emails go to committers & authors
+#notifications:
+#  email:
