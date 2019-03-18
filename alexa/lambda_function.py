@@ -19,7 +19,7 @@ from ask_sdk_model import (
 from ask_sdk_model.slu.entityresolution import StatusCode
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 ACTIVITIES = {
     'inside': {'cheap': ['Bake cookies.', 'Make macaroni art.', 'Play video games.', 'Listen to music.', 'Take a nap.',
