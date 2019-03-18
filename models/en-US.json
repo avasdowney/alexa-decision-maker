@@ -1,34 +1,272 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "activity decider",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "activity decider",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ActivityDeciderIntent",
+                    "slots": [
+                        {
+                            "name": "activity",
+                            "type": "activityType"
+                        },
+                        {
+                            "name": "location",
+                            "type": "locationType",
+                            "samples": [
+                                "{I_Want} {article} {location} {activity}",
+                                "{I_Want} {location}",
+                                "{location}"
+                            ]
+                        },
+                        {
+                            "name": "cost",
+                            "type": "costType",
+                            "samples": [
+                                "{cost} {activity}"
+                            ]
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType"
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType"
+                        }
+                    ],
+                    "samples": [
+                        "{I_Want} {article} {activity}",
+                        "{I_Want} {article} {location} {cost} activity",
+                        "find an activity",
+                        "{location} {activity}",
+                        "for a {activity}",
+                        "{I_Want} {article} {location} {activity}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "articleType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "an"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "locationType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "inside",
+                                "synonyms": [
+                                    "indoors",
+                                    "at home"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "outside",
+                                "synonyms": [
+                                    "outdoors"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IWantType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "my favorite is"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I prefer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "let's find"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we would like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "how about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I want"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I like"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "costType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cheap",
+                                "synonyms": [
+                                    "inexpensive",
+                                    "free",
+                                    "affordable"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "expensive",
+                                "synonyms": [
+                                    "not free",
+                                    "unaffordable"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "activityType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "activity",
+                                "synonyms": [
+                                    "unicorn",
+                                    "chimera",
+                                    "dragon"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
         },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ActivityDeciderIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "activity",
+                            "type": "activityType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "cost",
+                            "type": "costType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-ActivityDeciderIntent.IntentSlot-cost"
+                            }
+                        },
+                        {
+                            "name": "location",
+                            "type": "locationType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-ActivityDeciderIntent.IntentSlot-location"
+                            }
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
         },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
-          "name": "GetNewActivityIntent",
-          "samples": [
-            "give me an activity",
-            "tell me something to do",
-            "tell me an activity"
-          ],
-          "slots": []
-        }
-      ]
+        "prompts": [
+            {
+                "id": "Elicit.Intent-ActivityDeciderIntent.IntentSlot-cost",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "There are activities that are cheap or expensive.  Which would you like?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Would you like something cheap or expensive?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-ActivityDeciderIntent.IntentSlot-location",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you looking for something inside or outside?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to be inside or outside?"
+                    }
+                ]
+            }
+        ]
     }
-  }
 }
