@@ -28,7 +28,7 @@ ACTIVITIES = {
                'expensive': ['Go shopping.', 'Go bowling.', 'Go to the movies.', 'Go out to eat at a restaurant.']},
     'outside': {'cheap': ['Go for a drive.', 'Go swimming.', 'Go ice skating.', 'Have a photo shoot.', 'Go on a hike.',
                           'Go on a walk.', 'Go get ice cream.', 'Do a backflip.'],
-                'expensive': ['Go mini golfing.']}
+                'expensive': ['Go mini golfing.', 'Go to a trampoline park.']}
 }
 
 # Request Handler classes
