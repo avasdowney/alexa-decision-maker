@@ -25,10 +25,10 @@ ACTIVITIES = {
     'inside': {'cheap': ['Bake cookies.', 'Make macaroni art.', 'Play video games.', 'Listen to music.', 'Take a nap.',
                          'Go through old pictures.', 'Make a video for YouTube.',
                          'Go to the grocery store and eat the free samples.', 'Make an Alexa skill.'],
-               'expensive': ['Go shopping.', 'Go bowling.', 'Go to the movies.', 'Go out to eat at a restaurant.']},
+               'expensive': ['Go shopping.', 'Go bowling.', 'Go to the movies.', 'Go out to eat at a restaurant.', 'Go to a trampoline park.']},
     'outside': {'cheap': ['Go for a drive.', 'Go swimming.', 'Go ice skating.', 'Have a photo shoot.', 'Go on a hike.',
                           'Go on a walk.', 'Go get ice cream.', 'Do a backflip.'],
-                'expensive': ['Go mini golfing.', 'Go to a trampoline park.']}
+                'expensive': ['Go mini golfing.']}
 }
 
 # Request Handler classes
