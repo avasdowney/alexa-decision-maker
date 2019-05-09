@@ -16,7 +16,7 @@ Generally stated, creating an Alexa skill takes a lot of steps. First, I needed 
 
 #### Step 1: Come up with a plan
 
-*Come up with a goal
+* Come up with a goal
 
 I first had to come up with an idea for my skill. It is very hard to develop a skill if you do not know what you want it to do. 
 There are many different examples of skills I could have created. The most popular skills are games, kid-friendly skills, content skills, music skills, and habit-forming skills. A game skill includes interactive adventures, quizzes, Jeopardy and The Spongebob Challenge. They are not much different than other video games I might see, but they are controlled exclusively by my voice. A kid-friendly skill is meant to engage kids to help them be creative and smarter thinkers. A content skill is a skill created to deliver content to people whether this be the weather or the news. Music skills play music for their customer. An example of a music skill would be Spotify or Sirius radio.  A habit forming skill is meant to help the user develop a routine, so it might remind the user daily to do something such as water the plants.
