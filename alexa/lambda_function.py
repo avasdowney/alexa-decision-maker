@@ -82,13 +82,13 @@ class GetNewActivityHandler(AbstractRequestHandler):
         # type: (HandlerInput) -> Response
         logger.info("In GetNewActivityIntentHandler")
 
+        speech = ""
         # Collect some debug information either way
-        object_type = handler_input.request_envelope.request.object_type
-        speech = "Object type is " + object_type
-
-        if is_request_type("IntentRequest")(handler_input):
-            intent = handler_input.request_envelope.request.intent.name
-            speech = speech + " and intent is " + intent
+        # object_type = handler_input.request_envelope.request.object_type
+        # speech = "Object type is " + object_type
+        # if is_request_type("IntentRequest")(handler_input):
+        #    intent = handler_input.request_envelope.request.intent.name
+        #    speech = speech + " and intent is " + intent
 
         # Next, based on the type of intent, find the right activity
         if is_intent_name("GetNewFreeActivityIntent")(handler_input):
@@ -98,7 +98,7 @@ class GetNewActivityHandler(AbstractRequestHandler):
             random_fact = random.choice(indoor_activities)
             speech = speech + ". " + GET_FACT_MESSAGE + random_fact
         else:
-            speech = speech + ". Try asking for something more specific."
+            speech = speech + ". Try asking for something more specific like 'Give me something free from activity decider'"
 
         handler_input.response_builder.speak(speech).set_card(
             SimpleCard(SKILL_NAME, speech)).set_should_end_session(
