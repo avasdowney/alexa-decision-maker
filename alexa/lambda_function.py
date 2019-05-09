@@ -84,7 +84,7 @@ class GetNewFreeActivityHandler(AbstractRequestHandler):
 
         object_type = handler_input.request_envelope.request.object_type
         speech = "Object type is " + object_type
-        if is_request_type("IntentRequest"):
+        if is_request_type("IntentRequest")(handler_input):
             intent = handler_input.request_envelope.request.intent.name
             speech = speech + " and intent is " + intent
 
