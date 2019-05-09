@@ -82,11 +82,21 @@ class GetNewFreeActivityHandler(AbstractRequestHandler):
         # type: (HandlerInput) -> Response
         logger.info("In GetNewFreeActivityIntent")
 
-        random_fact = random.choice(free_activities)
-        speech = GET_FACT_MESSAGE + random_fact
+        object_type = handler_input.request_envelope.request.object_type
+        speech = "Object type is " + object_type
+        if is_request_type("IntentRequest"):
+            intent = handler_input.request_envelope.request.intent.name
+            speech = speech + " and intent is " + intent
+
+#        random_fact = random.choice(free_activities)
+#        speech = GET_FACT_MESSAGE + random_fact
 
         handler_input.response_builder.speak(speech).set_card(
-            SimpleCard(SKILL_NAME, random_fact))
+            SimpleCard(SKILL_NAME, speech)).set_should_end_session(
+            True)
+
+ #       handler_input.response_builder.speak(speech).set_card(
+ #           SimpleCard(SKILL_NAME, random_fact))
         return handler_input.response_builder.response
 
 
