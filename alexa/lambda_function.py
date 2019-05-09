@@ -66,7 +66,7 @@ indoor_activities = [
 ]
 
 exhibition_activities = [
-  'Snap your fingers thrice.'
+  'Snap your fingers once.'
 ]
 
 # =========================================================================================================================================
