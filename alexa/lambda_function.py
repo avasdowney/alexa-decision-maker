@@ -93,10 +93,10 @@ class GetNewActivityHandler(AbstractRequestHandler):
         # Next, based on the type of intent, find the right activity
         if is_intent_name("GetNewFreeActivityIntent")(handler_input):
             random_fact = random.choice(free_activities)
-            speech = speech + GET_FACT_MESSAGE + random_fact
+            speech = speech + ("Here's your free activity: ") + random_fact
         elif is_intent_name("GetNewIndoorActivityIntent")(handler_input):
             random_fact = random.choice(indoor_activities)
-            speech = speech + GET_FACT_MESSAGE + random_fact
+            speech = speech + ("Here's your indoor activity: ") + random_fact
         else:
             speech = speech + "Try asking for something more specific like 'Give me something free from activity decider'"
 
