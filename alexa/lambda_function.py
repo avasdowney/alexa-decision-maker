@@ -88,8 +88,8 @@ class GetNewFreeActivityHandler(AbstractRequestHandler):
             intent = handler_input.request_envelope.request.intent.name
             speech = speech + " and intent is " + intent
 
-#        random_fact = random.choice(free_activities)
-#        speech = GET_FACT_MESSAGE + random_fact
+        random_fact = random.choice(free_activities)
+        speech = speech + ". " + GET_FACT_MESSAGE + random_fact
 
         handler_input.response_builder.speak(speech).set_card(
             SimpleCard(SKILL_NAME, speech)).set_should_end_session(
