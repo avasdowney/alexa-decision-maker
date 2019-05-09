@@ -32,34 +32,42 @@ EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 # =========================================================================================================================================
 
 free_activities = [
-  'Go mini golfing.',
-  'Go to the movies.',
   'Bake cookies.',
   'Make macaroni art.',
   'Play video games.',
   'Go for a drive.',
   'Listen to music.',
-  'Go swimming.',
-  'Go ice skating.',
   'Take a nap.',
   'Go through old pictures.',
   'Have a photo shoot.',
   'Go on a hike.',
   'Go on a walk.',
-  'Go get ice cream.',
   'Make a video for YouTube.',
-  'Go out to eat at a restaurant.',
   'Go to the grocery store and eat the free samples.',
   'Do a backflip.',
   'Make an Alexa skill.',
-  'Cry'
+  'Cry.'
 ]
 
 indoor_activities = [
   'Go shopping.',
-  'Go bowling.'
+  'Go bowling.',
+  'Go to the movies.',
+  'Bake cookies.',
+  'Make macaroni art.',
+  'Play video games.',
+  'Listen to music.',
+  'Take a nap.',
+  'Go through old pictures.',
+  'Have a photo shoot.',
+  'Make a video for YouTube.',
+  'Go out to eat at a restaurant.',
+  'Cry.'
 ]
 
+exhibition_activities = [
+  'Snap your fingers once.'
+]
 
 # =========================================================================================================================================
 # Editing anything below this line might break your skill.
@@ -97,6 +105,9 @@ class GetNewActivityHandler(AbstractRequestHandler):
         elif is_intent_name("GetNewIndoorActivityIntent")(handler_input):
             random_fact = random.choice(indoor_activities)
             speech = speech + ("Here's your indoor activity: ") + random_fact
+        elif is_intent_name("GetNewExhibitionActivityIntent")(handler_input):
+            random_fact = random.choice(exhibition_activities)
+            speech = speech + ("Here's your exhibition activity: ") + random_fact
         else:
             speech = speech + "Try asking for something more specific like 'Give me something free from activity decider'"
 

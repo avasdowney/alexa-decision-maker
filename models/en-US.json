@@ -29,6 +29,16 @@
           "slots": []
         },
         {
+          "name": "GetNewExhibitionActivityIntent",
+          "samples": [
+            "give me an exhibition activity",
+            "tell me something to do at my exhibition",
+            "tell me an exhibition activity",
+            "exhibition activity"
+          ],
+          "slots": []
+        },
+        {
           "name": "GetNewIndoorActivityIntent",
           "samples": [
             "give me something indoor",
