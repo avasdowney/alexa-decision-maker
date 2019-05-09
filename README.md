@@ -1,8 +1,8 @@
-### How I Created my Amazon Alexa Skill
+# How I Created my Amazon Alexa Skill
 
 By: Ava Downey
  
-# Introduction:
+#### Introduction:
 
 For my senior project, I studied how to create an Amazon Alexa skill. Specifically, How can I create an Amazon Alexa skill? I created a skill, but as I am Ava, I went on tangents not specifically related to my original goal of making a complex skill. I decided to focus more on the general program aspects of creating a program, but under the guise of Amazon Alexa, as it was something I had never done before and I loved the idea of my friends being able to use what I created. I also had a cool idea for a skill to decide on activities for me to do because I am a super indecisive person, and I know a lot of people who struggle with making decisions as well. It also seemed fun to have something lighthearted to code. 
 
@@ -14,14 +14,14 @@ An Amazon Alexa device is able to process language by sending it to the cloud wh
 Generally stated, creating an Alexa skill takes a lot of steps. First, I needed to come up with a plan on what I want to create my skill on, as it is very hard to create a skill without knowing what to create. Next, I created a draft of what I want to do and collect feedback on it. This feedback was used to better my skill. Next, I needed to set up a few accounts to be able to create my skill. My Amazon Developer account and my Amazon Web Services account are required as they are what allows Amazon to deploy my skill. my GitHub account and Travis CI accounts made my life 100x easier when it came to actually testing and making changes to my skill. I also installed GitBash to my computer so I can more easily use GitHub and Travis CI. Once I had my accounts set up, I needed to actually code my skill. I found a template online that I was able to use to help me create my skill. I changed the general code to better fit my needs. Then, later on, I plan on publishing my skill to the Amazon Alexa store so that my friends and family will be able to use it as well. I have not done this yet, but I plan on doing so over the summer when I have more time to work on it.
 
 
-*Step 1: Come up with a plan
+#### Step 1: Come up with a plan
 
-Come up with a goal
+*Come up with a goal
 
 I first had to come up with an idea for my skill. It is very hard to develop a skill if you do not know what you want it to do. 
 There are many different examples of skills I could have created. The most popular skills are games, kid-friendly skills, content skills, music skills, and habit-forming skills. A game skill includes interactive adventures, quizzes, Jeopardy and The Spongebob Challenge. They are not much different than other video games I might see, but they are controlled exclusively by my voice. A kid-friendly skill is meant to engage kids to help them be creative and smarter thinkers. A content skill is a skill created to deliver content to people whether this be the weather or the news. Music skills play music for their customer. An example of a music skill would be Spotify or Sirius radio.  A habit forming skill is meant to help the user develop a routine, so it might remind the user daily to do something such as water the plants.
 
-Make an outline
+*Make an outline
 
 First, I made flowcharts to show different utterances and their outcomes. I came up with several outcomes for more popular tasks and think of different ways people might ask to perform a certain task. Then I layed out everything I wanted my skill to be able to accomplish without worrying too much about how it all falls together. 
 
@@ -48,15 +48,15 @@ If you wanted  to include screens and visuals in your skill, it would be necessa
 
 Since my skill is more simple in nature, it does not require a lot of forethought on what happens. It is fairly straightforward and explanatory through the name. The image above shows my original thought process when I first started developing my skill. 
 
-*Step 2: Solidify what I want to do
+#### Step 2: Solidify what I want to do
 
-Gather feedback
+*Gather feedback
 
 An important part of creating an Amazon Alexa skill is to gather feedback from its potential users.  This helped me minimize time I wasted while creating my skill, where I might be implementing something unnecessary, and I can use that time to implement something cool that the user may find more necessary. This is also a place to think about user functionality and ease of access in my skill. The main idea of this step is to avoid having to backstep and doing more work later on in my development process. It is easier to part with work and think about new ways to do things before I spend six hours working on it. It overall makes for a more cohesive and interactive skill as my final product. 
 
 Since I created my skill for myself, I talked to people around me to get feedback on my skill. Since I was not making my skill for a client, I did not have to listen to their feedback with as much weight, but it is still a good idea to think about their feedback and incorporate it into my skill. 
 
-Incorporate feedback
+*Incorporate feedback
 
 Next, I had to use the feedback I got from the previous step to make changes to my flowchart. Depending on who I am creating the skill for, I can take more or less of the feedback into consideration depending on where I want to bring the skill. The table below shows my updated flowchart.
 
@@ -102,34 +102,38 @@ Next, I had to use the feedback I got from the previous step to make changes to 
 		Go on a hike
 		Go swimming
 
-*Step 3: Set up my Developer Console
+#### Step 3: Set up my Developer Console
 
-Create my account
+*Create my account
+
 In order to create an Amazon Alexa skill, I needed to create an Amazon Developer account. 
 In the top right corner of my screen will be a button that says sign in. Click this button, and since I did not have an account, I clicked Create my Amazon Developer account. I filled in my information under the Profile Information tab, and accepted and agreed to the terms and conditions on the App Distribution Agreement tab. Once I got to the Payments tab, I made sure that I had selected no for both of the options. I am agreeing by doing this that I will not be making any money through my skill, but I can always change this later. After I completed this step I had set up my developer account! It brought me to my Amazon Developer dashboard.
 Set up my portal
-Once I am in my portal, I am wanted to start creating my skill. I clicked the Skill Builders tab in the top left, and then the blue Start a Skill button. This brought me to the page where all of my skills are stored, so if I ever wanted to get back to a skill, I can access it in here. 
+
+Once I am in my portal, I am wanted to start creating my skill. I clicked the Skill Builders tab in the top left, and then the blue Start a Skill button. This brought me to the page where all of my skills are stored, so if I ever wanted to get back to a skill, I can access it in here.
+
 I am going to create a new skill, so I clicked the create a skill button on the right. Here I decided my skill name. I called my skill alexa-decision-maker so it was easy to remember.
 
-
 I also set my default language to be English (US) for the sake of this skill, as it is the language we will be programming the skill for.  It is important to note that this is the language I am coding my skill for now, but I can always add more language variances in the future. For skills I may create in the future, I am going to want to change the language to best suit the audience I am aiming my skill to be for, and I should have a good grasp of the language and its mannerisms to make sure that it makes sense to the user when they use my skill.
+
 Next up, I chose a model to create my skill from. I decided to create my skill from a custom model. This gave me more control and variance from the beginning, however, the other models can be useful for other skills if I know that they cater well to what I am trying to accomplish.
+
 The more specific models fill in some of the blanks for me by making my skill writing process mainly fill in the blank through the portal.
+
 Lastly, I chose how I will be hosting my code. I selected the Provision my Own option. This means that I will be hosting my own code, rather than having Amazon do it for me. I will be making a Lambda function later that will fulfill this requirement for me. A Lambda function is the code I write that fulfills the backend of my skill. It is like the skeleton of the skill. Once I was confident that everything was correctly filled out, I scrolled back up to the top of the page and pressed the blue create skill button. 
 Navigating the portal
 The Amazon Developer Portal is where all of my code will be uploaded for my Alexa skill. This brought me to my home page, where a Skill builder checklist was shown to tell me what I have integrated into my skill so far. I did not have any checks yet, as I had not yet started creating the actual skill.
 
 The next tab down is the Invocation tab. Here, I declared my skills invocation name.  In simpler terms, this is where I stated what my skill is called. Alexa listens for these phrases after her name, which she then encrypts and sends to Amazon before they take my skill and its response and send I my answer through Alexa.
 
-
 Below the Invocation tab is the Intents tab. This is where my intents are stored. At this point, I had 5 intents that are required by Amazon. They each relate my custom skill back to Alexa's basic functionalities. Simply, and intent is an action my Alexa will take to fulfill the users request.
 The AMAZON.CancelIntent lets the user cancel an intent or exit the skill entirely. The AMAZON.HelpIntent is an intent that gives the user help in general Amazon Alexa scope. The AMAZON.StopIntent allows the user to stop either the intent they invoked, or the skill in total. The AMAZON.FallbackIntent is an intent that gives the user an error message, when there is no code in the skill that responds to the users command. The AMAZON.NavigateHomeIntent brings the user back to the home screen on an Amazon Alexa with a screen. 
 One example of an intent I added later is the GetNewActivityIntent. This is an intent I created to grab out invocations and start my skill. It is crucial for its functionality, but I added later with my code.
 Here, I also saw my slots. A slot is added when choice is added to my skill. They are like variables I created. I did not have any slots at this point in my skill creation. They were added through the code for the skill. They made my skill work when I added more variables to my code.
 
-*Step 4: Set up my Amazon Web Services account
+#### Step 4: Set up my Amazon Web Services account
 
-Create my account
+*Create my account
 
 I needed an Amazon Web Services (AWS) account to be able to make my Lambda functions, which allows my Alexa skill to function. This is where I put the backend of my code. 
 
@@ -147,7 +151,7 @@ Once I signed in, I was greeted with the AWS management console. From here, in t
 At this step, I selected my AWS region to best fit the users of my skill. Since I live in North America, this was the US East (N. Virginia) option. There are other options that may be closer, but not all of the locations support Lambda. 
 Once my region was properly selected, I created my first Lambda function! I pressed the orange Create Function button in the top right of my screen to start creating my function.
 
-Setup my Lambda function
+*Setup my Lambda function
 
 I chose to author my function from scratch, and filled in the function name and runtime boxes. I made sure to use a meaningful function name, so I knew what my function would do. I chose to call my function activityDecider, because my skill decides on activities for me. It is commonplace for coders to leave the first letter of a variable as a lowercase, and capitalize the first letter of each subsequent word to make them easier to read.
 
@@ -156,9 +160,9 @@ Under permissions, I chose to create a new role with basic Lambda permissions. T
 
 I scrolled down to the bottom of the page, where I saw a section called Execution Role. The first dropdown menu here asked me to choose a role that defines the permissions of my function. I chose to Use an existing role, and then chose service-role/lambda_basic_execution. I chose this role because it is pre-coded, and it works well for what I am trying to do. After I did this, I scrolled back up to the top of the screen and saved my changes. Then, I had the basis to lay my Lambda function.
 
-*Step 5: Set up my GitHub and Gitbash
+#### Step 5: Set up my GitHub and Gitbash
 
-Create my GitHub account
+*Create my GitHub account
 
 GitHub is extremely useful for any developer, with any project. It is an online tool that makes it easier to collaborate with other people, have a system of version control, and in my case, push my code up into Amazon’s cloud. 
 
@@ -169,7 +173,7 @@ The last step of setting up my account relied totally off of my comfort in progr
 
 After I submitted this step, I verified my email, and then I had a GitHub account!
 
-Create a repository
+*Create a repository
 
 Once I created my account, I was able to create a repository to hold my code for this particular project. A repository (repo for short) is like a folder or a library that will hold my code. It lets me see all the aspects of my project, as well as all the different versions of my project I committed. 
 
@@ -183,7 +187,7 @@ I then had the option to have a README file generated with my repository. A READ
 
 Lastly, I needed to set the language for my .gitignore file, and add a license for my code. I chose python as my .gitignore language and the MIT License as my license. I chose python as my language because I am coding the rest of my skill in python. The MIT one works well for what we want. The MIT License works well because not only is it free to use, but it also has very few restrictions on reuse. I could then create my repository.
 
-Install GitBash
+*Install GitBash
 
 GitHub goes hand in hand with GitBash. GitBash is a downloadable tool that lets you easily push code up to github, as well as pull it down. It simulates a Linux environment as it has much of the same commands and nuances. It is what allows me to use GitHub.
 
@@ -201,23 +205,21 @@ Once the correct version installed, I configured it to connect to my GitHub acco
 I checked to see if I filled this in correctly using the following command.
 	git config --global --list
 
-*Step 6: Start to code
+#### Step 6: Start to code
 
-Install Pycharm
+*Install Pycharm
 
 Pycharm is a program I used to write my programs. The main language supported by Pycharm is Python, but I can still write in different languages in it. It just may not catch any errors or be able to run, depending on the language.
 
 Out of all the things I had to setup and install, Pycharm was the easiest. I downloaded the community file and double clicked on it to open it. I also pinned the program to my taskbar so it is easy to access. I also made sure I was using Python 3, as that is what my code is written in.
 
-Start my code
+*Start my code
 
 Once I had my GitHub and GitBash configured, it was time to start coding. Alexa apps are cool as in they accept many different languages of code. I chose to program my program in Python as it is the language I was most comfortable in, and out of all the programming languages I find it the easiest to follow, read, and explain. 
 
-My final code can be seen on my GitHub, which looks like the screenshot below.
-
 I did not create my code from scratch though, and I used somebody else's code to get me where I am. Since I did not focus on the code alone, it was the only way I would have actually gotten a working skill since there's so much to learn from the code alone. I used this tutorial to help me create my code originally. I went in and commented the code, and modified it to do what I needed it to do. I decided that I wanted to make my code more complicated later though, so I found more code on GitHub that I was able to use to help create my code. I was able to build my code off of these codes by forking their code, or taking a copy for myself.  I did this by clicking the fork button in the top right of the page. This created a new repository in my GitHub, including everything in my Alexa-Decision-Maker repository at that time. I could then make changes and modify this repository however I want without affecting the repository I forked from.
 
-How to pull code from GitHub
+*How to pull code from GitHub
 
 Pushing and pulling code is essential to using GitHub. I had forked the repository, but I had not yet pulled it down onto my computer to edit it. 
 
@@ -234,7 +236,7 @@ This cloned the repository to my computer, but did not download it. To download 
 	
 To pull the code down. After this was done, the files in the repository were stored on my computer. I navigated back to the alexa-decision-maker folder I created to see the files. I opened them one by one there using Pycharm, or I could have gone to Pycharm and opened them all at once. I opened the folder itself, so I did not have to individually open every file, because that would have taken forever.
 
-How to push code to Github
+*How to push code to Github
 
 Once I got the code from GitHub, I was able to modify it however I wanted. I went to the file called lamda_function.py and added an activity. This can be found around line 24 which can be seen in the sidebar.
 
@@ -259,14 +261,14 @@ Then, if I looked at my GitHub repository it will show that I modified some file
 
 I could see that the Alexa folder was modified because that is where the python file I modified is located. Putting my code on GitHub alone did not help me much in terms of publishing my skill though, because I needed to loop it back into my Amazon Developer account.
 
-*Step 7: Set up my Travis CI account
+#### Step 7: Set up my Travis CI account
 
-Create Travis CI account
+*Create Travis CI account
 
 Travis CI helps to continually integrate software. In my case, I used it to push my code to Amazon Developer through GitHub. It is the middleman of these two accounts, and once it was working, all I had to do to put my skill on the developer portal was push it to GitHub.
 I created a Travis CI account here. In the top right corner of the webpage is an option to sign in with GitHub, which I oh so conveniently have. I signed in with my GitHub and then I had a Travis CI account!
 
-Connect Travis CI account to my skill
+*Connect Travis CI account to my skill
 
 I then went back to Pycharm, and opened a file called travis.yml, which looks like this.
 
@@ -274,9 +276,9 @@ I opened up my Amazon Developer Portal and navigated the endpoint tab of the por
 
 Here, I found my Default Region. This tells Amazon that the code I am publishing belongs with my skill. I copied my default region and pasted it the default region or role found in the 25th line of code.
 
-*Step 8: Test my code
+#### Step 8: Test my code
 
-Testing in Amazon Developer Console
+*Testing in Amazon Developer Console
 
 Once I had my Travis CI connected to everything, I pushed my code again to get the process to happen. I could see if it worked in the Travis CI page. If it correctly works, once I pushed the skill I should see this.
 
@@ -285,21 +287,21 @@ At the top of the Amazon Developer Portal page, there is an option to Test my co
 
 In the bar, I could either type my invocation, or I could click on the microphone to the right to speak it. I typed, “Alexa, open activity decider” to open the skill and answered the questions she prompted me with. I didn't speak it because I’m self conscious and didn’t want my mom to judge me for talking to my computer. I was then given an activity to participate in from the list in my Python program.
 
-*Step 9: Refine my skill
+#### Step 9: Refine my skill
 
-Gather more feedback
+*Gather more feedback
 
 Once I had my skill up and running, it went through another round of feedback. This was where people would tell me minor modifications to add such as new activities, or another question to ask. The changes I made in this round were minor, as the bulk of my skill was already built, and I was just beautifying it. I also had bugs pointed out for me to fix in my code.
 
 One way people gave me feedback was through my GitHub page. Next to the code tab, there is a tab called Issues. In this tab, people could leave suggestions or bugs that they thought should be fixed or implemented. I later was able to go in and sort the comments into things that needed to be done immediately and things that could be done over a longer span of time. I could also was able to sort them by what the comment was asking me to do, such as by bug, question, enhancement, etc. 
 
-Incorporate feedback
+*Incorporate feedback
 
 I then took the new feedback I acquired and took it into account. I went through the fixes and additions in an order that I thought made sense, and fixed the most pressing matters first. 
 
 Since I made the program for myself, it was not as important that I incorporate everything in a timely manner, like I would have if I were making the program for someone else. The only thing I had to be aware of is my ever-approaching exhibition date.
 
-*Step 10: Publish my skill
+#### Step 10: Publish my skill
 
 I have not yet published my skill, but in the future, like possibly over the summer, this is something I will do. It just did not make sense for me to publish it before exhibitions with how much I still needed to get done at that point.
 Skill guidelines
@@ -313,7 +315,7 @@ I will fill in the subsections relating to the nature of my skill, and go throug
 
 My skill will be reviewed by a team at Amazon to make sure it follows the guidelines, and assuming it does, it will be live in just 1.5 to 2 weeks! If it does not follow the guidelines, it will be rejected, and I will have to modify it to fit the guidelines. 
 
-*Reflection:
+#### Reflection:
 
 There are a lot of different types of Amazon Alexa skills, and I only hit on one in this tutorial, because it is the type of skill I focused on for my project. I made a decision tree skill because my skill takes input from the user, but I also could have made a quiz game, trivia game, kid friendly skill, content skill, music skill, or a habit forming skill. I chose to do a decision tree because I thought it would challenge me to have more than one interaction with Alexa, and also because I thought it would be cool to create a skill that would help me make decisions. The fact that it took me four months to come up with my skill idea can attest to that.
 
