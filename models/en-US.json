@@ -23,6 +23,7 @@
           "name": "GetNewFreeActivityIntent",
           "samples": [
             "give me something free",
+            "give me a free activity",
             "tell me something free to do",
             "tell me a free activity"
           ],
@@ -43,6 +44,7 @@
           "samples": [
             "give me something indoor",
             "give me something indoors",
+            "give me an indoor activity",
             "tell me something indoors to do",
             "tell me an indoor activity"
           ],
