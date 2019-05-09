@@ -14,10 +14,8 @@ from ask_sdk_core.handler_input import HandlerInput
 from ask_sdk_model.ui import SimpleCard
 from ask_sdk_model import Response
 
+# basic amazon commands... states invocation, error messages....
 
-# =========================================================================================================================================
-# TODO: The items below this comment need your attention.
-# =========================================================================================================================================
 SKILL_NAME = "Activity Decider"
 GET_FACT_MESSAGE = "Here's your activity: "
 HELP_MESSAGE = "You can say give me an activity, or, you can say exit... What can I help you with?"
@@ -27,9 +25,7 @@ FALLBACK_MESSAGE = "The Activity Decider skill can't help you with that.  It can
 FALLBACK_REPROMPT = 'What can I help you with?'
 EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 
-# =========================================================================================================================================
-# TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-python-fact/lambda/data
-# =========================================================================================================================================
+# activities separated by type... randomly chooses when invoked
 
 free_activities = [
   'Bake cookies.',
@@ -71,9 +67,7 @@ exhibition_activities = [
   'Snap your fingers thrice.'
 ]
 
-# =========================================================================================================================================
-# Editing anything below this line might break your skill.
-# =========================================================================================================================================
+# fun stuff to make alexa say words... also includes fallbacks
 
 sb = SkillBuilder()
 logger = logging.getLogger(__name__)
