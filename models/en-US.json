@@ -20,14 +20,25 @@
           "samples": []
         },
         {
-          "name": "GetNewActivityIntent",
+          "name": "GetNewFreeActivityIntent",
           "samples": [
-            "give me an activity",
-            "tell me something to do",
-            "tell me an activity"
+            "give me something free",
+            "tell me something free to do",
+            "tell me a free activity"
+          ],
+          "slots": []
+        },
+        {
+          "name": "GetNewIndoorActivityIntent",
+          "samples": [
+            "give me something indoor",
+            "give me something indoors",
+            "tell me something indoors to do",
+            "tell me an indoor activity"
           ],
           "slots": []
         }
+
       ]
     }
   }

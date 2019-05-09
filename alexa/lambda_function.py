@@ -31,9 +31,7 @@ EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 # TODO: Replace this data with your own.  You can find translations of this data at http://github.com/alexa/skill-sample-python-fact/lambda/data
 # =========================================================================================================================================
 
-data = [
-  'Go shopping.',
-  'Go bowling.',
+free_activities = [
   'Go mini golfing.',
   'Go to the movies.',
   'Bake cookies.',
@@ -57,6 +55,12 @@ data = [
   'Cry'
 ]
 
+indoor_activities = [
+  'Go shopping.',
+  'Go bowling.'
+]
+
+
 # =========================================================================================================================================
 # Editing anything below this line might break your skill.
 # =========================================================================================================================================
@@ -67,18 +71,37 @@ logger.setLevel(logging.DEBUG)
 
 
 # Built-in Intent Handlers
-class GetNewActivityHandler(AbstractRequestHandler):
+class GetNewFreeActivityHandler(AbstractRequestHandler):
+    """Handler for Skill Launch and GetNewFreeActivity Intent."""
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return (is_request_type("LaunchRequest")(handler_input) or
+                is_intent_name("GetNewFreeActivityIntent")(handler_input))
+
+    def handle(self, handler_input):
+        # type: (HandlerInput) -> Response
+        logger.info("In GetNewFreeActivityIntent")
+
+        random_fact = random.choice(free_activities)
+        speech = GET_FACT_MESSAGE + random_fact
+
+        handler_input.response_builder.speak(speech).set_card(
+            SimpleCard(SKILL_NAME, random_fact))
+        return handler_input.response_builder.response
+
+
+class GetNewIndoorActivityHandler(AbstractRequestHandler):
     """Handler for Skill Launch and GetNewActivity Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
         return (is_request_type("LaunchRequest")(handler_input) or
-                is_intent_name("GetNewActivityIntent")(handler_input))
+                is_intent_name("GetNewIndoorActivityIntent")(handler_input))
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        logger.info("In GetNewActivityIntent")
+        logger.info("In GetNewIndoorActivityIntent")
 
-        random_fact = random.choice(data)
+        random_fact = random.choice(indoor_activities)
         speech = GET_FACT_MESSAGE + random_fact
 
         handler_input.response_builder.speak(speech).set_card(
@@ -189,7 +212,7 @@ class ResponseLogger(AbstractResponseInterceptor):
 
 
 # Register intent handlers
-sb.add_request_handler(GetNewActivityHandler())
+sb.add_request_handler(GetNewFreeActivityHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(FallbackIntentHandler())
