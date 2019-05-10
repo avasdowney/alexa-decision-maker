@@ -62,7 +62,8 @@ indoor_activities = [
 ]
 
 exhibition_activities = [
-  'Snap your fingers thrice.'
+  'Snap your fingers thrice.',
+  'Give congratulatory remarks.'
 ]
 
 # fun stuff to make alexa say words... also includes fallbacks
