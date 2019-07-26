@@ -23,8 +23,11 @@
           "name": "GetNewFreeActivityIntent",
           "samples": [
             "give me something free",
+<<<<<<< HEAD
             "give me something free to do",
             "give me a free activity",
+=======
+>>>>>>> 5063b43aca2adcf8926ad6487a3c4886f732ec60
             "tell me something free to do",
             "tell me a free activity"
           ],
@@ -36,8 +39,11 @@
             "give me something indoor",
             "give me something inside",
             "give me something indoors",
+<<<<<<< HEAD
             "give me an indoor activity",
             "give me an inside activity",
+=======
+>>>>>>> 5063b43aca2adcf8926ad6487a3c4886f732ec60
             "tell me something indoors to do",
             "tell me something inside to do",
             "tell me an indoor activity",
