@@ -46,7 +46,9 @@ free_activities = [
   'Go to the grocery store and eat the free samples.',
   'Do a backflip.',
   'Make an Alexa skill.',
-  'Cry.'
+  'Cry.',
+  'Go to the library',
+  'Draw something'
 ]
 
 indoor_activities = [
@@ -62,11 +64,37 @@ indoor_activities = [
   'Have a photo shoot.',
   'Make a video for YouTube.',
   'Go out to eat at a restaurant.',
-  'Cry.'
+  'Cry.',
+  'Go to the library'
+  'Draw something'
 ]
 
-exhibition_activities = [
-  'Snap your fingers once.'
+outdoor_activities = [
+    ''
+]
+
+activities = [
+    'Bake cookies.',
+    'Make macaroni art.',
+    'Play video games.',
+    'Go for a drive.',
+    'Listen to music.',
+    'Take a nap.',
+    'Go through old pictures.',
+    'Have a photo shoot.',
+    'Go on a hike.',
+    'Go on a walk.',
+    'Make a video for YouTube.',
+    'Go to the grocery store and eat the free samples.',
+    'Do a backflip.',
+    'Make an Alexa skill.',
+    'Cry.',
+    'Go bowling',
+    'Go Shopping',
+    'Go to the movies',
+    'Go out to eat at a restaurant',
+    'Go to the library',
+    'Draw something'
 ]
 
 # =========================================================================================================================================
@@ -105,9 +133,12 @@ class GetNewActivityHandler(AbstractRequestHandler):
         elif is_intent_name("GetNewIndoorActivityIntent")(handler_input):
             random_fact = random.choice(indoor_activities)
             speech = speech + ("Here's your indoor activity: ") + random_fact
-        elif is_intent_name("GetNewExhibitionActivityIntent")(handler_input):
-            random_fact = random.choice(exhibition_activities)
-            speech = speech + ("Here's your exhibition activity: ") + random_fact
+        elif is_intent_name("GetNewOutdoorActivityIntent")(handler_input):
+            random_fact = random.choice(outdoor_activities)
+            speech = speech + ("Here's your outdoor activity: ") + random_fact
+        elif is_intent_name("GetNewActivityIntent")(handler_input):
+            random_fact = random.choice(activities)
+            speech = speech + ("Here's your activity: ") + random_fact
         else:
             speech = speech + "Try asking for something more specific like 'Give me something free from activity decider'"
 

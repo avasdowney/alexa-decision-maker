@@ -23,6 +23,7 @@
           "name": "GetNewFreeActivityIntent",
           "samples": [
             "give me something free",
+            "give me something free to do",
             "give me a free activity",
             "tell me something free to do",
             "tell me a free activity"
@@ -30,23 +31,43 @@
           "slots": []
         },
         {
-          "name": "GetNewExhibitionActivityIntent",
-          "samples": [
-            "give me an exhibition activity",
-            "tell me something to do at my exhibition",
-            "tell me an exhibition activity",
-            "exhibition activity"
-          ],
-          "slots": []
-        },
-        {
           "name": "GetNewIndoorActivityIntent",
           "samples": [
             "give me something indoor",
+            "give me something inside",
             "give me something indoors",
             "give me an indoor activity",
+            "give me an inside activity",
             "tell me something indoors to do",
-            "tell me an indoor activity"
+            "tell me something inside to do",
+            "tell me an indoor activity",
+            "tell me an inside activity"
+          ],
+          "slots": []
+        },
+                {
+          "name": "GetNewOutdoorActivityIntent",
+          "samples": [
+            "give me an outdoor activity",
+            "give me an outside activity"
+            "tell me an outdoor activity",
+            "tell me an outside activity",
+            "outdoor activity",
+            "outside activity",
+            "I need an outdoor activity",
+            "I need an outside activity"
+          ],
+          "slots": []
+        },
+                {
+          "name": "GetNewActivityIntent",
+          "samples": [
+            "give me an activity",
+            "tell me an activity",
+            "I need an activity",
+            "activity",
+            "tell me something to do",
+            "give me something to do"
           ],
           "slots": []
         }
