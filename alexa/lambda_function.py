@@ -18,10 +18,10 @@ from ask_sdk_model import Response
 
 SKILL_NAME = "Activity Decider"
 GET_FACT_MESSAGE = "Here's your activity: "
-HELP_MESSAGE = "You can say give me an activity, or, you can say exit... What can I help you with?"
+HELP_MESSAGE = "You can say give me an activity from activity decider, or, you can say exit... What can I help you with?"
 HELP_REPROMPT = "What can I help you with?"
 STOP_MESSAGE = "Goodbye!"
-FALLBACK_MESSAGE = "Activity Decider skill can't help you with that. It can help you decide on an activity if you say Alexa, tell activity decider to give me an activity."
+FALLBACK_MESSAGE = "Activity Decider skill can't help you with that. It can help you decide on an activity if you say Alexa, give me an activity from activity decider."
 FALLBACK_REPROMPT = 'What can I help you with?'
 EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 
@@ -61,7 +61,7 @@ indoor_activities = [
   'Make a video for YouTube.',
   'Go out to eat at a restaurant.',
   'Cry.',
-  'Go to the library'
+  'Go to the library',
   'Draw something'
 ]
 
@@ -148,7 +148,7 @@ class GetNewActivityHandler(AbstractRequestHandler):
             random_fact = random.choice(activities)
             speech = speech + ("Here's your activity: ") + random_fact
         else:
-            speech = speech + "Try asking for something more specific like 'Give me something free from activity decider'"
+            speech = speech + "Try asking for something more specific like 'Give me an activity from activity decider'"
 
         handler_input.response_builder.speak(speech).set_card(
             SimpleCard(SKILL_NAME, speech)).set_should_end_session(
