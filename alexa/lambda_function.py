@@ -21,7 +21,7 @@ GET_FACT_MESSAGE = "Here's your activity: "
 HELP_MESSAGE = "You can say give me an activity, or, you can say exit... What can I help you with?"
 HELP_REPROMPT = "What can I help you with?"
 STOP_MESSAGE = "Goodbye!"
-FALLBACK_MESSAGE = "The Activity Decider skill can't help you with that.  It can help you decide on an activity if you say What should I do. What can I help you with?"
+FALLBACK_MESSAGE = "Activity Decider skill can't help you with that. It can help you decide on an activity if you say Alexa, tell activity decider to give me an activity."
 FALLBACK_REPROMPT = 'What can I help you with?'
 EXCEPTION_MESSAGE = "Sorry. I cannot help you with that."
 
@@ -65,9 +65,16 @@ indoor_activities = [
   'Draw something'
 ]
 
-<<<<<<< HEAD
 outdoor_activities = [
-    ''
+    'Have a photo shoot',
+    'Go on a hike',
+    'Go on a walk',
+    'Play basketball',
+    'Go on a bike ride',
+    'Go swimming',
+    'Go ice skating',
+    'Have a barbeque',
+    'Have a water fight'
 ]
 
 activities = [
@@ -91,13 +98,13 @@ activities = [
     'Go to the movies',
     'Go out to eat at a restaurant',
     'Go to the library',
-    'Draw something'
-=======
-exhibition_activities = [
-  'Snap your fingers thrice.',
-  'Give congratulatory remarks.',
-  'Play basketball.'
->>>>>>> 5063b43aca2adcf8926ad6487a3c4886f732ec60
+    'Draw something',
+    'Play basketball',
+    'Go on a bike ride',
+    'Go swimming',
+    'Go ice skating',
+    'Have a barbeque',
+    'Have a water fight'
 ]
 
 # fun stuff to make alexa say words... also includes fallbacks
