@@ -60,7 +60,7 @@
           "slots": []
         },
                 {
-          "name": "GetNewActivityIntent",
+          "name": "GetNewActivitiesIntent",
           "samples": [
             "give me an activity",
             "tell me an activity",

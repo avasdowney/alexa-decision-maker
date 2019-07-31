@@ -147,7 +147,7 @@ class GetNewActivityHandler(AbstractRequestHandler):
             random_fact = random.choice(outdoor_activities)
             speech = speech + ("Here's your outdoor activity: ") + random_fact
 
-        elif is_intent_name("GetNewActivityIntent")(handler_input):
+        elif is_intent_name("GetNewActivitiesIntent")(handler_input):
             random_fact = random.choice(activities)
             speech = speech + ("Here's your activity: ") + random_fact
             
