@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "interactionModel": {
     "languageModel": {
@@ -75,3 +76,39 @@
     }
   }
 }
+=======
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "activity decider",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetNewActivityIntent",
+          "samples": [
+            "give me an activity",
+            "tell me something to do",
+            "tell me an activity"
+          ],
+          "slots": []
+        }
+      ]
+    }
+  }
+}
+>>>>>>> parent of 1fe5601... added an activity
